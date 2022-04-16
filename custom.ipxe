@@ -6,7 +6,7 @@
 :custom
 clear custom_choice
 menu This is a Test Menu
-item option_one ${space} Loading a kernel and initrd
+item option_one ${space} Load EndeavourOS
 echo ${cls}
 goto ${custom_choice}
 goto custom_exit
@@ -14,7 +14,7 @@ goto custom_exit
 :option_one
 kernel https://github.com/sdt16/asset-mirror/releases/download/Apollo_22_1-55b22783/vmlinuz
 initrd https://github.com/sdt16/asset-mirror/releases/download/Apollo_22_1-55b22783/initrd
-imgargs vmlinuz put_kernel_img_args_here
+imgargs vmlinuz
 boot || goto custom_exit
 
 
