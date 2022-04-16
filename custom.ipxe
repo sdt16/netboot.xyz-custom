@@ -3,7 +3,9 @@
 ### netboot.xyz-custom menu
 ###
 
-kernel https://github.com/sdt16/asset-mirror/releases/download/Apollo_22_1-55b22783/vmlinuz
+set ipparam BOOTIF=${netX/mac} ip=dhcp net.ifnames=0
+
+imgfree
+kernel https://github.com/sdt16/asset-mirror/releases/download/Apollo_22_1-55b22783/vmlinuz ${ipparam} archiso_http_srv=https://github.com/sdt16/asset-mirror/releases/download/Apollo_22_1-55b22783/ archisobasedir=arch cow_spacesize=10G earlymodules=loop modules-load=loop rd.modules-load=loop nvidia nouveau.modeset=0 nouveau.blacklist=yes modprobe.blacklist=nouveau i915.modeset=1 radeon.modeset=1 initrd=initrd.magic ${cmdline}
 initrd https://github.com/sdt16/asset-mirror/releases/download/Apollo_22_1-55b22783/initrd
-imgargs vmlinuz
 boot
