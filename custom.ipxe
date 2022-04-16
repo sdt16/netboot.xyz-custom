@@ -3,7 +3,7 @@
 ### netboot.xyz-custom menu
 ###
 
-:custom
+:start
 clear custom_choice
 menu This is a Test Menu
 item option_one ${space} Load EndeavourOS
